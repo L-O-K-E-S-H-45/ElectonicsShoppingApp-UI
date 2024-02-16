@@ -28,7 +28,7 @@ const allRoutes = () => {
           }
         } else {
           if (!nav.requireAuth && nav.role === 'ALL') {
-            // console.log(nav);
+            console.log(nav);
             return <Route key={i} path={nav.path} element={nav.element} />
           }
         }

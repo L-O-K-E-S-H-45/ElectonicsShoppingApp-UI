@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ name,isAuth}) => {
   return (
     <div>
         
@@ -19,9 +19,8 @@ const Header = () => {
             {/* Link Block */}
             <div className='flex justify-center items-center space-x-10 text-2xl font-bold'>
                 {/* Login */}
-                <Link to={"/login"}>
-                    Login
-                </Link>
+                {console.log(name)}
+              {isAuth ? <Link to="/account">{name}</Link> :<Link to="/login">Login</Link>}
 
                 {/* Become a seller option */}
                 <Link to={"/seller"}>
